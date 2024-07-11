@@ -3,12 +3,13 @@ document.addEventListener("DOMContentLoaded", function() {
     const userInput = document.getElementById("user_input");
     const chatbox = document.getElementById("chatbox");
 
-    sendButton.addEventListener("click", async function() {
+    sendButton.addEventListener("click", function() {
         const user_message = userInput.value.trim();
         if (user_message) {
             addMessageToChatbox("You", user_message);
-            const bot_response = await getBotResponse(user_message);
-            addMessageToChatbox("Bot", bot_response);
+            getBotResponse(user_message).then(bot_response => {
+                addMessageToChatbox("Bot", bot_response);
+            });
             userInput.value = "";
         }
     });
@@ -20,9 +21,13 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     async function getBotResponse(message) {
-        // Simple example response
-        // You can enhance this with actual machine learning models that can run in the browser
-        return `You said: ${message}`;
+        // Simulate a bot response
+        // You can replace this with a call to a machine learning model running in the browser if desired
+        return new Promise(resolve => {
+            setTimeout(() => {
+                resolve(`You said: ${message}`);
+            }, 1000);
+        });
     }
 
     function addMessageToChatbox(sender, message) {
