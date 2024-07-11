@@ -58,6 +58,10 @@
             background: #0056b3;
         }
     </style>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/toxicity"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@huggingface/tokenizers"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@huggingface/transformers"></script>
 </head>
 <body>
     <div id="chat-container">
@@ -67,18 +71,24 @@
         <button id="send-btn">Send</button>
     </div>
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
+        document.addEventListener("DOMContentLoaded", async function() {
             const sendButton = document.getElementById("send-btn");
             const userInput = document.getElementById("user_input");
             const chatbox = document.getElementById("chatbox");
 
-            sendButton.addEventListener("click", function() {
+            const model = await window.huggingface.loadModel('facebook/dialogpt-medium');
+            const tokenizer = await window.huggingface.loadTokenizer('facebook/dialoGPT-medium');
+
+            let chatHistory = [];
+
+            sendButton.addEventListener("click", async function() {
                 const user_message = userInput.value.trim();
                 if (user_message) {
                     addMessageToChatbox("You", user_message);
-                    getBotResponse(user_message).then(bot_response => {
-                        addMessageToChatbox("Bot", bot_response);
-                    });
+                    chatHistory.push(user_message);
+                    const bot_response = await getBotResponse(user_message);
+                    addMessageToChatbox("Bot", bot_response);
+                    chatHistory.push(bot_response);
                     userInput.value = "";
                 }
             });
@@ -90,13 +100,9 @@
             });
 
             async function getBotResponse(message) {
-                // Simulate a bot response
-                // You can replace this with a call to a machine learning model running in the browser if desired
-                return new Promise(resolve => {
-                    setTimeout(() => {
-                        resolve(`You said: ${message}`);
-                    }, 1000);
-                });
+                const encoded_input = tokenizer.encode(chatHistory.join(' '), return_tensors='pt');
+                const response = await model.generate(encoded_input, max_length=1000, pad_token_id=tokenizer.eos_token_id);
+                return tokenizer.decode(response[0], skip_special_tokens=True);
             }
 
             function addMessageToChatbox(sender, message) {
