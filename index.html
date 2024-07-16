@@ -29,6 +29,17 @@
             object-fit: cover;
             display: block;
         }
+        .profile-pic {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border: 5px solid #fff;
+            background-color: #fff;
+        }
         .content {
             padding: 20px 0;
         }
@@ -61,12 +72,6 @@
             background: #fff;
             color: #333;
         }
-        .expert-image {
-            width: 100%;
-            max-width: 200px;
-            border-radius: 50%;
-            margin: 20px 0;
-        }
     </style>
 </head>
 <body>
@@ -94,12 +99,12 @@
     <!-- Header -->
     <div class="header">
         <img src="file-1n5MCVR1Vv8RhkQF2wHcsWnJ (1).webp" alt="Astrologer Banner">
+        <img src="17211478159223301232873530599774.jpg" class="profile-pic" alt="Astrologer Shashank Shekhar Singh">
     </div>
 
     <!-- About Section -->
     <section id="about" class="section bg-white text-center">
         <div class="container">
-            <img src="17211478159223301232873530599774.jpg" class="expert-image" alt="Astrologer Shashank Shekhar Singh">
             <h1>Astrologer Shashank Shekhar Singh</h1>
             <p><strong>Profession:</strong> Astrologer</p>
             <p><strong>Stream:</strong> Vedic, Palmistry</p>
