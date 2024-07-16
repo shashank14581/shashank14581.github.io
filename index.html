@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Astrologer Shashank Shekhar Singh</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
             font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #f7f7f7, #e2e2e2);
             margin: 0;
             padding: 0;
             display: flex;
@@ -15,29 +17,36 @@
             justify-content: center;
             text-align: center;
         }
-        img {
-            max-width: 100%;
-            height: auto;
-        }
         .container {
             padding: 20px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        .profile-img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
         }
         .content {
             margin-top: 20px;
         }
-        .english, .hindi {
-            margin: 20px 0;
+        h1 {
+            color: #333;
         }
-        .contact {
-            margin-top: 20px;
+        p {
+            color: #666;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <img src="17211478159223301232873530599774.jpg" alt="Astrologer Shashank Shekhar Singh">
+    <div class="container text-center">
+        <img src="17211478159223301232873530599774.jpg" class="profile-img" alt="Astrologer Shashank Shekhar Singh">
         <div class="content">
-            <div class="english">
+            <div class="english mb-4">
                 <h1>Astrologer Shashank Shekhar Singh</h1>
                 <p><strong>Profession:</strong> Astrologer</p>
                 <p><strong>Stream:</strong> Vedic, Palmistry</p>
@@ -46,7 +55,7 @@
                 <p>Discover the ancient wisdom of Vedic astrology with Shashank Shekhar Singh. With a deep understanding of celestial influences and palmistry, he offers insights into your life's journey, helping you navigate through challenges and harness your true potential.</p>
                 <p>Unlock the mysteries of your birth chart, understand the karmic patterns affecting your present, and find guidance for a prosperous future. Whether it's career, relationships, or personal growth, Shashank provides personalized readings tailored to your unique needs.</p>
             </div>
-            <div class="hindi">
+            <div class="hindi mb-4">
                 <h1>ज्योतिषी शशांक शेखर सिंह</h1>
                 <p><strong>पेशा:</strong> ज्योतिषी</p>
                 <p><strong>श्रेणी:</strong> वैदिक, हस्तरेखा</p>
@@ -61,5 +70,8 @@
             </div>
         </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
