@@ -8,18 +8,24 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background: #f5f5f5;
+            background: #fff;
             margin: 0;
             padding: 0;
         }
         .navbar {
             margin-bottom: 20px;
         }
-        .profile-img {
-            max-width: 200px;
-            border-radius: 50%;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            margin-bottom: 20px;
+        .header {
+            background: linear-gradient(to right, #ffcc80, #ff7043);
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .header img {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            display: block;
         }
         .content {
             margin-top: 20px;
@@ -33,11 +39,23 @@
             padding: 20px 0;
             text-align: center;
         }
-        h1 {
+        h1, h2 {
             color: #333;
         }
         p {
             color: #666;
+        }
+        .graphics {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .graphic {
+            width: 30%;
+            height: 150px;
+            background: linear-gradient(to bottom, #ffcc80, #ff7043);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
     </style>
 </head>
@@ -63,54 +81,25 @@
         </div>
     </nav>
 
+    <!-- Header -->
+    <div class="header">
+        <img src="17211478159223301232873530599774.jpg" alt="Astrologer Shashank Shekhar Singh">
+    </div>
+
+    <!-- Graphics -->
+    <div class="graphics container">
+        <div class="graphic"></div>
+        <div class="graphic"></div>
+        <div class="graphic"></div>
+    </div>
+
     <!-- About Section -->
     <section id="about" class="section bg-white text-center">
         <div class="container">
-            <img src="17211478159223301232873530599774.jpg" class="profile-img" alt="Astrologer Shashank Shekhar Singh">
             <h1>Astrologer Shashank Shekhar Singh</h1>
             <p><strong>Profession:</strong> Astrologer</p>
             <p><strong>Stream:</strong> Vedic, Palmistry</p>
             <p><strong>Charges:</strong> ₹400/hour</p>
             <p><strong>Experience:</strong> 5 years</p>
             <p>Discover the ancient wisdom of Vedic astrology with Shashank Shekhar Singh. With a deep understanding of celestial influences and palmistry, he offers insights into your life's journey, helping you navigate through challenges and harness your true potential.</p>
-            <p>Unlock the mysteries of your birth chart, understand the karmic patterns affecting your present, and find guidance for a prosperous future. Whether it's career, relationships, or personal growth, Shashank provides personalized readings tailored to your unique needs.</p>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="section bg-light text-center">
-        <div class="container">
-            <h2>Our Services</h2>
-            <p>Providing a wide range of astrological services including:</p>
-            <ul class="list-unstyled">
-                <li>Vedic Astrology Consultations</li>
-                <li>Palmistry Readings</li>
-                <li>Birth Chart Analysis</li>
-                <li>Karmic Pattern Interpretation</li>
-                <li>Personalized Astrological Guidance</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section bg-white text-center">
-        <div class="container">
-            <h2>Contact</h2>
-            <p>If you have any questions or would like to schedule a consultation, please reach out to us:</p>
-            <p><strong>Phone:</strong> 9140824454</p>
-            <p><strong>Email:</strong> shashank14581@gmail.com</p>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 Astrologer Shashank Shekhar Singh. All Rights Reserved.</p>
-        </div>
-    </footer>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
-</html>
+            <p>Unlock the mysteries of your bi
