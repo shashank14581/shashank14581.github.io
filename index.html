@@ -18,17 +18,19 @@
         .header {
             background: linear-gradient(to right, #ffcc80, #ff7043);
             color: #fff;
-            padding: 20px;
+            padding: 0;
             text-align: center;
+            position: relative;
+            height: 300px;
         }
         .header img {
             width: 100%;
-            max-height: 400px;
+            height: 100%;
             object-fit: cover;
             display: block;
         }
         .content {
-            margin-top: 20px;
+            padding: 20px 0;
         }
         .section {
             padding: 60px 0;
@@ -45,17 +47,19 @@
         p {
             color: #666;
         }
-        .graphics {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 20px;
-        }
-        .graphic {
-            width: 30%;
-            height: 150px;
-            background: linear-gradient(to bottom, #ffcc80, #ff7043);
-            border-radius: 10px;
+        .card {
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .card-header {
+            background: #ff7043;
+            color: #fff;
+            border-radius: 10px 10px 0 0;
+        }
+        .card-body {
+            background: #fff;
+            color: #333;
         }
     </style>
 </head>
@@ -86,13 +90,6 @@
         <img src="17211478159223301232873530599774.jpg" alt="Astrologer Shashank Shekhar Singh">
     </div>
 
-    <!-- Graphics -->
-    <div class="graphics container">
-        <div class="graphic"></div>
-        <div class="graphic"></div>
-        <div class="graphic"></div>
-    </div>
-
     <!-- About Section -->
     <section id="about" class="section bg-white text-center">
         <div class="container">
@@ -101,5 +98,96 @@
             <p><strong>Stream:</strong> Vedic, Palmistry</p>
             <p><strong>Charges:</strong> ₹400/hour</p>
             <p><strong>Experience:</strong> 5 years</p>
-            <p>Discover the ancient wisdom of Vedic astrology with Shashank Shekhar Singh. With a deep understanding of celestial influences and palmistry, he offers insights into your life's journey, helping you navigate through challenges and harness your true potential.</p>
-            <p>Unlock the mysteries of your bi
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header">Celestial Insights</div>
+                        <div class="card-body">
+                            Discover the ancient wisdom of Vedic astrology with Shashank Shekhar Singh. With a deep understanding of celestial influences and palmistry, he offers insights into your life's journey.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header">Personalized Readings</div>
+                        <div class="card-body">
+                            Unlock the mysteries of your birth chart, understand the karmic patterns affecting your present, and find guidance for a prosperous future with personalized readings.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header">Guidance and Growth</div>
+                        <div class="card-body">
+                            Whether it's career, relationships, or personal growth, Shashank provides personalized readings tailored to your unique needs, helping you navigate through challenges and harness your true potential.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section bg-light text-center">
+        <div class="container">
+            <h2>Our Services</h2>
+            <p>Providing a wide range of astrological services including:</p>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">Vedic Astrology Consultations</div>
+                        <div class="card-body">
+                            Gain insights into your life's journey through Vedic astrology, understanding celestial influences and karmic patterns that shape your destiny.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">Palmistry Readings</div>
+                        <div class="card-body">
+                            Uncover the secrets held within your palms, exploring your life's path and potential through the ancient art of palmistry.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">Birth Chart Analysis</div>
+                        <div class="card-body">
+                            Dive deep into the details of your birth chart, revealing insights and guidance that can help you navigate life's challenges and opportunities.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">Karmic Pattern Interpretation</div>
+                        <div class="card-body">
+                            Understand the karmic patterns affecting your present and find guidance for a prosperous future through personalized astrological readings.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section bg-white text-center">
+        <div class="container">
+            <h2>Contact</h2>
+            <p>If you have any questions or would like to schedule a consultation, please reach out to us:</p>
+            <p><strong>Phone:</strong> 9140824454</p>
+            <p><strong>Email:</strong> shashank14581@gmail.com</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Astrologer Shashank Shekhar Singh. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
