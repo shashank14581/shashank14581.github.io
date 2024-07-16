@@ -8,31 +8,30 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background: linear-gradient(to bottom, #f7f7f7, #e2e2e2);
+            background: #f5f5f5;
             margin: 0;
             padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
         }
-        .container {
-            padding: 20px;
-            background: #fff;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            border-radius: 10px;
-            margin-top: 20px;
+        .navbar {
+            margin-bottom: 20px;
         }
         .profile-img {
-            width: 100%;
-            max-width: 300px;
+            max-width: 200px;
             border-radius: 50%;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
             margin-bottom: 20px;
         }
         .content {
             margin-top: 20px;
+        }
+        .section {
+            padding: 60px 0;
+        }
+        .footer {
+            background: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
         }
         h1 {
             color: #333;
@@ -43,33 +42,73 @@
     </style>
 </head>
 <body>
-    <div class="container text-center">
-        <img src="17211478159223301232873530599774.jpg" class="profile-img" alt="Astrologer Shashank Shekhar Singh">
-        <div class="content">
-            <div class="english mb-4">
-                <h1>Astrologer Shashank Shekhar Singh</h1>
-                <p><strong>Profession:</strong> Astrologer</p>
-                <p><strong>Stream:</strong> Vedic, Palmistry</p>
-                <p><strong>Charges:</strong> ₹400/hour</p>
-                <p><strong>Experience:</strong> 5 years</p>
-                <p>Discover the ancient wisdom of Vedic astrology with Shashank Shekhar Singh. With a deep understanding of celestial influences and palmistry, he offers insights into your life's journey, helping you navigate through challenges and harness your true potential.</p>
-                <p>Unlock the mysteries of your birth chart, understand the karmic patterns affecting your present, and find guidance for a prosperous future. Whether it's career, relationships, or personal growth, Shashank provides personalized readings tailored to your unique needs.</p>
-            </div>
-            <div class="hindi mb-4">
-                <h1>ज्योतिषी शशांक शेखर सिंह</h1>
-                <p><strong>पेशा:</strong> ज्योतिषी</p>
-                <p><strong>श्रेणी:</strong> वैदिक, हस्तरेखा</p>
-                <p><strong>शुल्क:</strong> ₹400/घंटा</p>
-                <p><strong>अनुभव:</strong> 5 वर्ष</p>
-                <p>शशांक शेखर सिंह के साथ वैदिक ज्योतिष के प्राचीन ज्ञान की खोज करें। खगोलीय प्रभावों और हस्तरेखा के गहरे ज्ञान के साथ, वह आपके जीवन की यात्रा में अंतर्दृष्टि प्रदान करते हैं, चुनौतियों को पार करने और अपनी सच्ची क्षमता का उपयोग करने में आपकी मदद करते हैं।</p>
-                <p>अपने जन्म कुंडली के रहस्यों को उजागर करें, वर्तमान को प्रभावित करने वाले कर्म पैटर्न को समझें, और एक समृद्ध भविष्य के लिए मार्गदर्शन प्राप्त करें। चाहे वह करियर हो, रिश्ते हों, या व्यक्तिगत विकास हो, शशांक आपकी अनूठी आवश्यकताओं के अनुरूप व्यक्तिगत रीडिंग प्रदान करते हैं।</p>
-            </div>
-            <div class="contact">
-                <p><strong>Contact:</strong> 9140824454</p>
-                <p><strong>Email:</strong> shashank14581@gmail.com</p>
-            </div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Astrologer Shashank Shekhar Singh</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#services">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
         </div>
-    </div>
+    </nav>
+
+    <!-- About Section -->
+    <section id="about" class="section bg-white text-center">
+        <div class="container">
+            <img src="17211478159223301232873530599774.jpg" class="profile-img" alt="Astrologer Shashank Shekhar Singh">
+            <h1>Astrologer Shashank Shekhar Singh</h1>
+            <p><strong>Profession:</strong> Astrologer</p>
+            <p><strong>Stream:</strong> Vedic, Palmistry</p>
+            <p><strong>Charges:</strong> ₹400/hour</p>
+            <p><strong>Experience:</strong> 5 years</p>
+            <p>Discover the ancient wisdom of Vedic astrology with Shashank Shekhar Singh. With a deep understanding of celestial influences and palmistry, he offers insights into your life's journey, helping you navigate through challenges and harness your true potential.</p>
+            <p>Unlock the mysteries of your birth chart, understand the karmic patterns affecting your present, and find guidance for a prosperous future. Whether it's career, relationships, or personal growth, Shashank provides personalized readings tailored to your unique needs.</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section bg-light text-center">
+        <div class="container">
+            <h2>Our Services</h2>
+            <p>Providing a wide range of astrological services including:</p>
+            <ul class="list-unstyled">
+                <li>Vedic Astrology Consultations</li>
+                <li>Palmistry Readings</li>
+                <li>Birth Chart Analysis</li>
+                <li>Karmic Pattern Interpretation</li>
+                <li>Personalized Astrological Guidance</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section bg-white text-center">
+        <div class="container">
+            <h2>Contact</h2>
+            <p>If you have any questions or would like to schedule a consultation, please reach out to us:</p>
+            <p><strong>Phone:</strong> 9140824454</p>
+            <p><strong>Email:</strong> shashank14581@gmail.com</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Astrologer Shashank Shekhar Singh. All Rights Reserved.</p>
+        </div>
+    </footer>
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
